@@ -22,5 +22,6 @@
   "homepage": "https://github.com/ArtemKaPetrakov/backend-project-46#readme",
   "dependencies": {
     "commander": "^9.4.0"
-  }
+  },
+  "devDependencies": {}
 }
