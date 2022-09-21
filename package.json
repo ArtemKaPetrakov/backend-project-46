@@ -23,5 +23,7 @@
   "dependencies": {
     "commander": "^9.4.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint": "^8.23.1"
+  }
 }
