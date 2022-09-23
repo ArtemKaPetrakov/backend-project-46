@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import getContent from './getContent.js'; 
 import path from 'path';
+import displayResult from './displayResult.js';
 
 // ./имядиректории - подразумевается что директория (или файла) лежит в текущей для вас директории (открытой в терминале или директори исполнения скрипта).
 // Такой формат особенно актуален при запуске исполняемых файлов -- мы как бы показываем, что запускаем не команду вообще, а именно файл из этой директории с таким именем.
@@ -21,9 +22,9 @@ export default (file1, file2) => {
         console.log('Неизвестный формат')
     }
   };
-
+  // выбрать парсинг от форматат 
   const parserType = parser(fileExtension);
-
+  // запарсить 
   const obj1 = parserType(filepath1);
   const obj2 = parserType(filepath2);
 
@@ -49,7 +50,7 @@ export default (file1, file2) => {
       return {type: 'added', key, value: value2} 
     }
   })
-  return result;
+  return displayResult(result);
   };
 
 
