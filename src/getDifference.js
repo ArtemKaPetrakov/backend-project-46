@@ -19,7 +19,7 @@ export default (file1, file2) => {
       case '.json' :
         return JSON.parse;
       default: 
-        console.log('Неизвестный формат')
+        console.log('Неизвестный формат');
     }
   };
   // выбрать парсинг от форматат 
