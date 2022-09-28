@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
-import { fileURLToPath } from 'url';
+
 import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 import path from 'path';
 import fs from 'fs';
 import genDiff from '../src/index.js'
@@ -12,12 +13,10 @@ const __dirname = dirname(__filename);
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 
 const resultPath = getFixturePath('expected_file.js');
-
+// путь до файла с результатом
 const result = fs.readFileSync(resultPath, 'utf8');
 
 test('Generate Differense', () => {
-  const actual = genDiff('./__fixtures__/file1.json', './__fixtures__/file2.json');
-  expect(actual).toEqual(expectedResult);
+  const actual = genDiff(getFixturePath('file1.json') , getFixturePath('file2.json'));
+  expect(actual).toEqual(result);
 });
-
-console.log(result);
