@@ -9,7 +9,7 @@
 
 ### Test Coverage Badge
 
-<a href="https://codeclimate.com/github/ArtemKaPetrakov/backend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/becfd8170718c27966bb/test_coverage" /></a>
+
 
 ### Вывод справки:
 
