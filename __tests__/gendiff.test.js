@@ -12,7 +12,7 @@ const __dirname = dirname(__filename);
 //константа  __dirname cодержит абсолютный путь, к каталогу.
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 
-const resultPath = getFixturePath('expected_file.js');
+const resultPath = getFixturePath('expected_file.txt');
 // путь до файла с результатом
 const result = fs.readFileSync(resultPath, 'utf8');
 
