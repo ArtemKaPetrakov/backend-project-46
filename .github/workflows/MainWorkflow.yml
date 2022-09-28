@@ -1,5 +1,5 @@
 # Name of workflow
-name: Node CI
+name: Main Workflow
 
 # Trigger the workflow on push or pull request
 on:
@@ -17,7 +17,7 @@ jobs:
     strategy:
       # Node versions list
       matrix:
-        node-version: [14.x]
+        node-version: [16.x]
 
     steps:
         # Check-out repository under GitHub workspace
