@@ -10,5 +10,8 @@
 ### Test Coverage Badge
 <a href="https://codeclimate.com/github/ArtemKaPetrakov/backend-project-46/test_coverage"><img src="https://api.codeclimate.com/v1/badges/becfd8170718c27966bb/test_coverage" /></a>
 
-### Accinema:
+### Вывод справки:
+
+### $ gendiff -h
+
 <a href="https://asciinema.org/a/N03VKaFEdBDAoQP2ixtS1520y" target="_blank"><img src="https://asciinema.org/a/N03VKaFEdBDAoQP2ixtS1520y.svg" /></a>
