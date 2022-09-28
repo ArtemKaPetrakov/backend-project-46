@@ -1,6 +1,5 @@
 import displayJSON from './displayJSON.js';
 
-
 export default (file, fileExtension) => {
 
   switch (fileExtension) {
