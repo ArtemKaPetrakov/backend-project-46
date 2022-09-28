@@ -1,6 +1,11 @@
 [![Actions Status](https://github.com/ArtemKaPetrakov/backend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/ArtemKaPetrakov/backend-project-46/actions)
-[<a href="https://codeclimate.com/github/ArtemKaPetrakov/backend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/becfd8170718c27966bb/maintainability" /></a>]
-[![Main](https://github.com/ArtemKaPetrakov/backend-project-46/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/ArtemKaPetrakov/backend-project-46/actions/workflows/main.yml)]
+<a href="https://codeclimate.com/github/ArtemKaPetrakov/backend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/becfd8170718c27966bb/maintainability" /></a>
+
+[![Main](https://github.com/ArtemKaPetrakov/backend-project-46/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/ArtemKaPetrakov/backend-project-46/actions/workflows/main.yml)
+
+### Test Coverage Badge
+
+
 
 ### Вывод справки:
 
