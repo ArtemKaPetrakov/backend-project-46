@@ -1,5 +1,4 @@
 /* eslint-disable no-undef */
-
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import path from 'path';
