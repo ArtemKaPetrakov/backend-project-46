@@ -2,7 +2,7 @@ import parser from './parser.js';
 import _ from 'lodash';
 import getContent from './getContent.js'; 
 import path from 'path';
-import displayResult from './displayResults/displayResult.js';
+import displayResult from './displayResult.js';
 
 // ./имядиректории - подразумевается что директория (или файла) лежит в текущей для вас директории (открытой в терминале или директори исполнения скрипта).
 // Такой формат особенно актуален при запуске исполняемых файлов -- мы как бы показываем, что запускаем не команду вообще, а именно файл из этой директории с таким именем.
@@ -41,5 +41,5 @@ export default (file1, file2) => {
       return {type: 'added', key, value: value2} 
     }
   })
-  return displayResult(result, fileExtension);
+  return displayResult(result);
   };
