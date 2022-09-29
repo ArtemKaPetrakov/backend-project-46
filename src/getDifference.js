@@ -14,18 +14,8 @@ export default (file1, file2) => {
 
   const fileExtension = path.extname(file1);
   // определить формат файла 
-
-  // const parser = (fileExtension) => {
-  //   switch (fileExtension) {
-  //     case '.json' :
-  //       return JSON.parse;
-  //     default: 
-  //       console.log('Неизвестный формат');
-  //   }
-  // };
-  // выбрать парсинг от форматат 
   const parserType = parser(fileExtension);
-  // запарсить 
+  // выбирает парсинг в зависимости от разрешения файла и парсит его 
   const obj1 = parserType(filepath1);
   const obj2 = parserType(filepath2);
 
