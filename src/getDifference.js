@@ -1,3 +1,4 @@
+import parser from './parser.js';
 import _ from 'lodash';
 import getContent from './getContent.js'; 
 import path from 'path';
@@ -14,14 +15,14 @@ export default (file1, file2) => {
   const fileExtension = path.extname(file1);
   // определить формат файла 
 
-  const parser = (fileExtension) => {
-    switch (fileExtension) {
-      case '.json' :
-        return JSON.parse;
-      default: 
-        console.log('Неизвестный формат');
-    }
-  };
+  // const parser = (fileExtension) => {
+  //   switch (fileExtension) {
+  //     case '.json' :
+  //       return JSON.parse;
+  //     default: 
+  //       console.log('Неизвестный формат');
+  //   }
+  // };
   // выбрать парсинг от форматат 
   const parserType = parser(fileExtension);
   // запарсить 
@@ -52,5 +53,3 @@ export default (file1, file2) => {
   })
   return displayResult(result, fileExtension);
   };
-
-
