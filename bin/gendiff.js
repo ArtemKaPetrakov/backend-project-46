@@ -2,6 +2,7 @@
 
 import { Command } from 'commander';
 import genDiff from '../src/index.js';
+import stylish from '../src/stylish.js';
 const program = new Command();
 
 program
@@ -13,6 +14,7 @@ program
   .action((file1, file2) => {
     const diff = genDiff(file1, file2);
     console.log(diff);
+    // stylish(diff);
   });
 
 program.parse();

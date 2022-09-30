@@ -10,4 +10,3 @@ export default (fileExtension) => {
       console.log('Неизвестный формат');
   }
 };
-
