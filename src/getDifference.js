@@ -26,10 +26,14 @@ export default (file1, file2) => {
     const keys1 = Object.keys(object1);
     const keys2 = Object.keys(object2);
 
+    //!Получили ключи 
+
     const unionKeys = _.union(keys1, keys2).sort();
 
+    //!Объединили и отортировали ключи 
+
     return unionKeys.map((key) => {
-    
+    //! пошли по ключам и если объект то вызываем функицю заново, дальше все как было 
     if (typeof object1[key] === 'object' && typeof object2[key] === 'object') {
       return {key, value: generateDiff(object1[key], object2[key])}
     }
@@ -48,4 +52,5 @@ export default (file1, file2) => {
   })
   };
   return generateDiff(obj1, obj2);
+  //!запуск от объектов которые данны 
 };
