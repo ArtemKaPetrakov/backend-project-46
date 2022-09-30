@@ -2,7 +2,6 @@ import parser from './parser.js';
 import _ from 'lodash';
 import getContent from './getContent.js'; 
 import path from 'path';
-import displayResult from './displayResult.js';
 
 // ./имядиректории - подразумевается что директория (или файла) лежит в текущей для вас директории (открытой в терминале или директори исполнения скрипта).
 // Такой формат особенно актуален при запуске исполняемых файлов -- мы как бы показываем, что запускаем не команду вообще, а именно файл из этой директории с таким именем.
@@ -19,27 +18,34 @@ export default (file1, file2) => {
   const obj1 = parserType(filepath1);
   const obj2 = parserType(filepath2);
 
-  const keys1 = Object.keys(obj1);
-  const keys2 = Object.keys(obj2);
+  //! Получили ключи и объеденяем их 
+  //! Дальше надо реализвать функцию сравнения для рекурсивных структур данных  
 
-  const unionKeys = _.union(keys1, keys2).sort();
+  const generateDiff = (object1, object2) => {
 
-  const result = unionKeys.map((key) => {
-    const value1 = obj1[key];
-    const value2 = obj2[key];
+    const keys1 = Object.keys(object1);
+    const keys2 = Object.keys(object2);
 
-    if (value1 === value2) {
-      return {type: 'equal', key, value: obj1[key]}
+    const unionKeys = _.union(keys1, keys2).sort();
+
+    return unionKeys.map((key) => {
+    
+    if (typeof object1[key] === 'object' && typeof object2[key] === 'object') {
+      return {key, value: generateDiff(object1[key], object2[key])}
     }
-    if ((Object.hasOwn(obj1, key) && Object.hasOwn(obj2, key)) && value1 !== value2) {
-      return {type: 'updated', key, oldValue: value1, newValue: value2}
+    if (object1[key] === object2[key] ) {
+      return {type: 'equal', key, value: object1[key]}
     }
-    if (Object.hasOwn(obj1, key) && !Object.hasOwn(obj2, key)) {
-      return {type: 'removed', key, value: value1} 
+    if ((Object.hasOwn(object1, key) && Object.hasOwn(object2, key)) && object1[key] !== object2[key]) {
+      return {type: 'updated', key, oldValue: object1[key], newValue: object2[key]}
     }
-    if (!Object.hasOwn(obj1, key) && Object.hasOwn(obj2, key)) {
-      return {type: 'added', key, value: value2} 
+    if (Object.hasOwn(object1, key) && !Object.hasOwn(object2, key)) {
+      return {type: 'removed', key, value: object1[key]} 
+    }
+    if (!Object.hasOwn(object1, key) && Object.hasOwn(object2, key)) {
+      return {type: 'added', key, value: object2[key]} 
     }
   })
-  return displayResult(result);
   };
+  return generateDiff(obj1, obj2);
+};
