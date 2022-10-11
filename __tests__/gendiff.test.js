@@ -7,7 +7,7 @@ import genDiff from '../src/index.js';
 
 
 const __filename = fileURLToPath(import.meta.url);
-// константа  __filename содержит абсолютный пут.ь к файлу, в котором она используется
+// константа  __filename содержит абсолютный путь к файлу, в котором она используется
 const __dirname = dirname(__filename); 
 //константа  __dirname cодержит абсолютный путь, к каталогу.
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);

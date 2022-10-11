@@ -4,8 +4,10 @@ export default (fileExtension) => {
   switch (fileExtension) {
     case '.json' :
       return JSON.parse;
-      case'.yaml' :
-        return yaml.load;
+    case'.yaml' :
+      return yaml.load;
+    case'.yml' :
+      return yaml.load;
     default: 
       console.log('Неизвестный формат');
   }

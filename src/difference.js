@@ -1,13 +1,12 @@
 import parser from './parser.js';
 import _ from 'lodash';
-import getContent from './getContent.js'; 
+import getContent from './content.js'; 
 import path from 'path';
-
+import getFormatter from './formatters.js';
 // ./имядиректории - подразумевается что директория (или файла) лежит в текущей для вас директории (открытой в терминале или директори исполнения скрипта).
 // Такой формат особенно актуален при запуске исполняемых файлов -- мы как бы показываем, что запускаем не команду вообще, а именно файл из этой директории с таким именем.
 
-export default (file1, file2) => {
-  
+export default (file1, file2, option) => {
   const filepath1 = getContent(file1);
   const filepath2 = getContent(file2);
 
@@ -27,30 +26,34 @@ export default (file1, file2) => {
     const keys2 = Object.keys(object2);
 
     //!Получили ключи 
-
     const unionKeys = _.union(keys1, keys2).sort();
-
     //!Объединили и отортировали ключи 
 
-    return unionKeys.map((key) => {
+    return unionKeys.flatMap((key) => {
     //! пошли по ключам и если объект то вызываем функицю заново, дальше все как было 
     if (typeof object1[key] === 'object' && typeof object2[key] === 'object') {
-      return {key, value: generateDiff(object1[key], object2[key])}
+      return {type: 'nested', key, currentValue: generateDiff(object1[key], object2[key])}
     }
     if (object1[key] === object2[key] ) {
-      return {type: 'equal', key, value: object1[key]}
+      return {type: 'equal', key, currentValue: object1[key]}
     }
     if ((Object.hasOwn(object1, key) && Object.hasOwn(object2, key)) && object1[key] !== object2[key]) {
-      return {type: 'updated', key, oldValue: object1[key], newValue: object2[key]}
+      return {type: 'updated', key, removedValue: object1[key], currentValue: object2[key]}
     }
     if (Object.hasOwn(object1, key) && !Object.hasOwn(object2, key)) {
-      return {type: 'removed', key, value: object1[key]} 
+      return {type: 'removed', key, currentValue: object1[key]} 
     }
     if (!Object.hasOwn(object1, key) && Object.hasOwn(object2, key)) {
-      return {type: 'added', key, value: object2[key]} 
+      return {type: 'added', key, currentValue: object2[key]} 
     }
   })
   };
-  return generateDiff(obj1, obj2);
-  //!запуск от объектов которые данны 
+  // вернуть разницу отформатированую как ее получить???
+  const data = generateDiff(obj1, obj2);
+  // Для программной обработки кода необходимо его перевести в особое представление,Abstract Syntax Tree, AST
+  const dataFormatter = getFormatter(option);
+  //получили форматтер от опции 
+  return `{\n${dataFormatter(data)}\n}`;
+  // получили результат после обрабокти форматтером
+  // вернули результат 
 };
