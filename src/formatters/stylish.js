@@ -1,7 +1,7 @@
 import _ from "lodash";
 
 export const stylish = (data, depth = 1) => {
-  // console.log(data);
+  console.log(data);
   const result  = data.map((item) => {
 
     const makeIndent = (depth) => `${'  '.repeat(depth + 1)}`;
@@ -9,7 +9,6 @@ export const stylish = (data, depth = 1) => {
     const { type, key, removedValue, currentValue } = item;
 
     const stringify = (data, depth) => {
-
       if (!_.isPlainObject(data)) {
         return `${data}`;
       }

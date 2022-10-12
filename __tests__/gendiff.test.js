@@ -12,15 +12,25 @@ const __dirname = dirname(__filename);
 //константа  __dirname cодержит абсолютный путь, к каталогу.
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 
-const resultPath = getFixturePath('expected_file.txt');
+const resultPathStylish = getFixturePath('expected_file_stylish.txt');
+const resultPathPlain = getFixturePath('expected_file_plain.txt');
 // путь до файла с результатом
-const result = fs.readFileSync(resultPath, 'utf8');
+const resultStylish = fs.readFileSync(resultPathStylish, 'utf8');
+const resultPlain = fs.readFileSync(resultPathPlain, 'utf8');
 
-test('Generate Differense .json', () => {
-  let actual = genDiff(getFixturePath(`file1.json`) , getFixturePath(`file2.json`));
-  expect(actual).toEqual(result);
+test('Generate Differense - stylish - .json', () => {
+  let actual = genDiff(getFixturePath(`file1.json`) , getFixturePath(`file2.json`), 'stylish');
+  expect(actual).toEqual(resultStylish);
 });
-test('Generate Differense .yaml', () => {
-  let actual = genDiff(getFixturePath(`file1.yaml`) , getFixturePath(`file2.yaml`));
-  expect(actual).toEqual(result);
+test('Generate Differense - stylish - .yaml', () => {
+  let actual = genDiff(getFixturePath(`file1.yaml`) , getFixturePath(`file2.yaml`), 'stylish');
+  expect(actual).toEqual(resultStylish);
+});
+test('Generate Differense - plain - .json', () => {
+  let actual = genDiff(getFixturePath(`file1.json`) , getFixturePath(`file2.json`), 'plain');
+  expect(actual).toEqual(resultPlain);
+});
+test('Generate Differense - plain - .yaml', () => {
+  let actual = genDiff(getFixturePath(`file1.yaml`) , getFixturePath(`file2.yaml`), 'plain');
+  expect(actual).toEqual(resultPlain);
 });
