@@ -5,8 +5,7 @@ export const stylish = (data, depth = 1) => {
 
   // console.log(data);
 
-  return data.map((item) => {
-
+  const result = data.map((item) => {
 
     const makeIndent = (depth) => `${'  '.repeat(depth + 1)}`;
 
@@ -38,4 +37,5 @@ export const stylish = (data, depth = 1) => {
         return `${makeIndent(depth - 1)}  ${key}: {\n${stylish(currentValue, depth + 2)}\n${makeIndent(depth - 1)}  }`;
     }
   }).join('\n');
+  return `${result}`;
 };
