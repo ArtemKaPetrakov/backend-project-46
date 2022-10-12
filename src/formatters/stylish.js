@@ -1,11 +1,8 @@
 import _ from "lodash";
 
-
 export const stylish = (data, depth = 1) => {
-
   // console.log(data);
-
-  const result = data.map((item) => {
+  const result  = data.map((item) => {
 
     const makeIndent = (depth) => `${'  '.repeat(depth + 1)}`;
 
@@ -36,6 +33,6 @@ export const stylish = (data, depth = 1) => {
       case 'nested':
         return `${makeIndent(depth - 1)}  ${key}: {\n${stylish(currentValue, depth + 2)}\n${makeIndent(depth - 1)}  }`;
     }
-  }).join('\n');
-  return `${result}`;
+  });
+  return result.join('\n');
 };

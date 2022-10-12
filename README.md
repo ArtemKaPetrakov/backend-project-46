@@ -10,3 +10,7 @@
 
 ### Cравнение .yaml
 [![asciicast](https://asciinema.org/a/rKFXN286AwYllpG5A3JBAqMWI.svg)](https://asciinema.org/a/rKFXN286AwYllpG5A3JBAqMWI)
+
+
+### Рекурсивное сравнение 
+[![asciicast](https://asciinema.org/a/sTr6Q23xV0cq6LYBeuGQGIFVd.svg)](https://asciinema.org/a/sTr6Q23xV0cq6LYBeuGQGIFVd)
