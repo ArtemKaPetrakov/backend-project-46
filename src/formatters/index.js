@@ -1,13 +1,13 @@
-import { stylish }  from "./stylish.js";
-// import { plain }  from "./plain.js";
+import stylish from "./stylish.js";
+import { plain }  from "./plain.js";
 
-export default (data, option) => {
-  switch (option) {
+export default (data, format) => {
+  switch (format) {
     case 'stylish' :
-      return `{\n${stylish(data)}\n}`;
+      return stylish(data);
     case 'plain' :
       return plain(data); 
     default:
-      return `{\n${stylish(data)}\n}`;
+      return `unknown format :${format}`;
     }
   };

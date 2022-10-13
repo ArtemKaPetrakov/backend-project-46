@@ -1,7 +1,7 @@
 import _ from "lodash";
 
-export const stylish = (data, depth = 1) => {
-  console.log(data);
+const stylish = (data, depth = 1) => {
+  // console.log(data);
   const result  = data.map((item) => {
 
     const makeIndent = (depth) => `${'  '.repeat(depth + 1)}`;
@@ -34,4 +34,10 @@ export const stylish = (data, depth = 1) => {
     }
   });
   return result.join('\n');
+};
+
+
+export default (data) => {
+  const result = stylish(data);
+  return `{\n${result}\n}`
 };

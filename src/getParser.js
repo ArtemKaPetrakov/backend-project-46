@@ -1,13 +1,13 @@
 import yaml from 'js-yaml';
 
-export default (fileExtension) => {
-  switch (fileExtension) {
+export default (data, dataExtension) => {
+  switch (dataExtension) {
     case '.json' :
-      return JSON.parse;
+      return JSON.parse(data);
     case'.yaml' :
-      return yaml.load;
+      return yaml.load(data);
     case'.yml' :
-      return yaml.load;
+      return yaml.load(data);
     default: 
       console.log('Неизвестный формат');
   }
