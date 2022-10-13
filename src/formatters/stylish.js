@@ -36,7 +36,6 @@ const stylish = (data, depth = 1) => {
   return result.join('\n');
 };
 
-
 export default (data) => {
   const result = stylish(data);
   return `{\n${result}\n}`
