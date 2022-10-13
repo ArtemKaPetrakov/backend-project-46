@@ -5,12 +5,11 @@
 
 # Вычислитель отличий (gendiff)
 
-### Вывод спарвки и сравнение .json 
+### Вывод спарвки и сравнение плоских .json 
 [![asciicast](https://asciinema.org/a/x9AGYnfVrWJrxc5vw67AUoUSx.svg)](https://asciinema.org/a/x9AGYnfVrWJrxc5vw67AUoUSx)
 
-### Cравнение .yaml
+### Cравнение плоских .yaml
 [![asciicast](https://asciinema.org/a/rKFXN286AwYllpG5A3JBAqMWI.svg)](https://asciinema.org/a/rKFXN286AwYllpG5A3JBAqMWI)
 
-
-### Рекурсивное сравнение 
-[![asciicast](https://asciinema.org/a/sTr6Q23xV0cq6LYBeuGQGIFVd.svg)](https://asciinema.org/a/sTr6Q23xV0cq6LYBeuGQGIFVd)
+### Сравнение .json и .yaml имеющих вложенные структуры 
+[![asciicast](https://asciinema.org/a/01VJYbkiAAmmMvgo3egsPhOAe.svg)](https://asciinema.org/a/01VJYbkiAAmmMvgo3egsPhOAe)
