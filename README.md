@@ -11,5 +11,8 @@
 ### Cравнение плоских .yaml
 [![asciicast](https://asciinema.org/a/rKFXN286AwYllpG5A3JBAqMWI.svg)](https://asciinema.org/a/rKFXN286AwYllpG5A3JBAqMWI)
 
-### Сравнение .json и .yaml имеющих вложенные структуры 
+### Сравнение .json и .yaml имеющих вложенные структуры --stylish и plain--  
 [![asciicast](https://asciinema.org/a/01VJYbkiAAmmMvgo3egsPhOAe.svg)](https://asciinema.org/a/01VJYbkiAAmmMvgo3egsPhOAe)
+
+### Сравнение .json и .yaml имеющих вложенные структуры --json-- 
+[![asciicast](https://asciinema.org/a/bU7zhprlBGaArMDQfXmIVzckA.svg)](https://asciinema.org/a/bU7zhprlBGaArMDQfXmIVzckA)
