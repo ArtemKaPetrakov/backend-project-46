@@ -1,5 +1,4 @@
-import stylish from "./stylish.js";
-
 export default (data) => {
-  return JSON.stringify(stylish(data));
-}
+  const result = JSON.stringify(data);
+  return result;
+};
