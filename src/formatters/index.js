@@ -9,7 +9,7 @@ export default (data, format) => {
     case 'plain' :
       return plain(data);
     case 'json' :
-      return json(data);    
+      return json(data);
     default:
       return `unknown format :${format}`;
     }

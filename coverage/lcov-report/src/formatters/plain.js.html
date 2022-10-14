@@ -3,15 +3,15 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/getDifference.js</title>
+    <title>Code coverage report for src/formatters/plain.js</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="../prettify.css" />
-    <link rel="stylesheet" href="../base.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style type='text/css'>
         .coverage-summary .sorter {
-            background-image: url(../sort-arrow-sprite.png);
+            background-image: url(../../sort-arrow-sprite.png);
         }
     </style>
 </head>
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> getDifference.js</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/formatters</a> plain.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/19</span>
+                <span class='fraction'>17/17</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">94.73% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>18/19</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>6/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/19</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -93,79 +93,67 @@
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a>
-<a name='L32'></a><a href='#L32'>32</a>
-<a name='L33'></a><a href='#L33'>33</a>
-<a name='L34'></a><a href='#L34'>34</a>
-<a name='L35'></a><a href='#L35'>35</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">30x</span>
-<span class="cline-any cline-yes">30x</span>
-<span class="cline-any cline-yes">30x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">10x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">108x</span>
-<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">36x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">84x</span>
-<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">72x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">66x</span>
-<span class="cline-any cline-yes">24x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">42x</span>
-<span class="cline-any cline-yes">12x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">30x</span>
-<span class="cline-any cline-yes">30x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import _ from 'lodash';
-import getData from './getData.js';
-import getNewFormat from './formatters/index.js';
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import _ from "lodash";
 &nbsp;
-  const generateDiff = (object1, object2) =&gt; {
-    const keys1 = Object.keys(object1);
-    const keys2 = Object.keys(object2);
-    const unionKeys = _.union(keys1, keys2).sort();
+const plain = (data, path = '') =&gt; {
+  // console.log(data);
+  const result  = data.flatMap((item) =&gt; {
 &nbsp;
-    return unionKeys.map((key) =&gt; {
+    const isComplexValue = (value) =&gt; _.isPlainObject(value) ? `[complex value]` : typeof value === 'string' ? `'${value}'`: value;
+      const { type, key, removedValue, currentValue } = item;
 &nbsp;
-    if (typeof object1[key] === 'object' &amp;&amp; typeof object2[key] === 'object') {
-      return {type: 'nested', key, currentValue: generateDiff(object1[key], object2[key])}
-    }
-    if (object1[key] === object2[key] ) {
-      return {type: 'equal', key, currentValue: object1[key]}
-    }
-    if ((Object.hasOwn(object1, key) &amp;&amp; Object.hasOwn(object2, key)) &amp;&amp; object1[key] !== object2[key]) {
-      return {type: 'updated', key, removedValue: object1[key], currentValue: object2[key]}
-    }
-    if (Object.hasOwn(object1, key) &amp;&amp; !Object.hasOwn(object2, key)) {
-      return {type: 'removed', key, currentValue: object1[key]}
-    }
-    <span class="missing-if-branch" title="else path not taken" >E</span>if (!Object.hasOwn(object1, key) &amp;&amp; Object.hasOwn(object2, key)) {
-      return {type: 'added', key, currentValue: object2[key]}
-    }
-  })
-  };
+      const fullPath = [path, key].filter((item =&gt; item !== '')).join('.');
 &nbsp;
-  export default (filePath1, filePath2, format) =&gt; {
-    const data1 = getData(filePath1);
-    const data2 = getData(filePath2);
-    const diff = generateDiff(data1, data2);
-    return getNewFormat(diff, format);
-  }</pre></td></tr></table></pre>
+      switch (type) {
+        case 'equal' : 
+          return ''; // без пустой строки возвращал undefined
+        case 'removed':
+          return `Property '${fullPath}' was removed`;
+        case 'added' :
+          return `Property '${fullPath}' was added with value: ${isComplexValue(currentValue)}`; 
+        case 'updated' : 
+          return `Property '${fullPath}' was updated. From ${isComplexValue(removedValue)} to ${isComplexValue(currentValue)}`;
+        case 'nested' : 
+          return plain(currentValue, fullPath)      
+      }
+  }).filter((item =&gt; item !== '')).join('\n');
+  return result;
+}
+&nbsp;
+export default (data) =&gt; {
+  const result = plain(data);
+  return result;
+}</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
@@ -174,14 +162,14 @@ import getNewFormat from './formatters/index.js';
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
                 at 2022-10-14T10:34:16.568Z
             </div>
-        <script src="../prettify.js"></script>
+        <script src="../../prettify.js"></script>
         <script>
             window.onload = function () {
                 prettyPrint();
             };
         </script>
-        <script src="../sorter.js"></script>
-        <script src="../block-navigation.js"></script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
     </body>
 </html>
     

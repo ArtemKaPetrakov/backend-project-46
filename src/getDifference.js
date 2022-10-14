@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import getData from './getData.js'; 
+import getData from './getData.js';
 import getNewFormat from './formatters/index.js';
 
   const generateDiff = (object1, object2) => {
@@ -19,12 +19,12 @@ import getNewFormat from './formatters/index.js';
       return {type: 'updated', key, removedValue: object1[key], currentValue: object2[key]}
     }
     if (Object.hasOwn(object1, key) && !Object.hasOwn(object2, key)) {
-      return {type: 'removed', key, currentValue: object1[key]} 
+      return {type: 'removed', key, currentValue: object1[key]}
     }
     if (!Object.hasOwn(object1, key) && Object.hasOwn(object2, key)) {
-      return {type: 'added', key, currentValue: object2[key]} 
+      return {type: 'added', key, currentValue: object2[key]}
     }
-  }) 
+  })
   };
 
   export default (filePath1, filePath2, format) => {

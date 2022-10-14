@@ -9,6 +9,6 @@ export default (data, dataExtension) => {
     case'.yml' :
       return yaml.load(data);
     default: 
-      console.log('Неизвестный формат');
+      return `unknown extension :${dataExtension}`;
   }
 };
