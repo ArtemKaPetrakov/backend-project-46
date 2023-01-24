@@ -8,8 +8,8 @@ export default (data, format) => {
       return stylish(data);
     case 'plain' :
       return plain(data);
-    // case 'json' :
-    //   return stylish(data); // json(data)
+    case 'json' :
+      return json(data); 
     default:
       return `unknown format :${format}`;
     }
