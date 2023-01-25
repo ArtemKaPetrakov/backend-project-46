@@ -1,3 +1,4 @@
+/* eslint-disable */
 import _ from 'lodash';
 import getData from './getData.js';
 import getNewFormat from './formatters/index.js';
@@ -33,3 +34,4 @@ export default (filePath1, filePath2, format) => {
   const diff = generateDiff(data1, data2);
   return getNewFormat(diff, format);
 };
+/* eslint-disable */

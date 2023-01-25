@@ -8,13 +8,15 @@ const plain = (data, path = '') => {
       if (_.isPlainObject(value)) {
         return '[complex value]';
       }
-      if (typeof value === 'string') {
+      else if (typeof value === 'string') {
         return `'${value}'`
       } else {
         return value;
       }
     }
-    const { type, key, removedValue, currentValue } = item;
+    const { 
+      type, key, removedValue, currentValue 
+    } = item;
 
     const fullPath = [path, key].filter((item => item !== '')).join('.');
 
