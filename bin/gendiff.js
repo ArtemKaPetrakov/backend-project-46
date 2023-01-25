@@ -12,6 +12,7 @@ program
   .arguments('<file1> <file2>')
   .action((file1, file2, option) => {
     const diff = genDiff(file1, file2, option.format);
+    // console.log(typeof diff);
     console.log(diff);
   });
 

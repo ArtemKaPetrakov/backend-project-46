@@ -2,7 +2,7 @@ import stylish from "./stylish.js";
 import plain from "./plain.js";
 import json from "./json.js";
 
-export default (data, format) => {
+export default (data, format = 'stylish') => {
   switch (format) {
     case 'stylish' :
       return stylish(data);
