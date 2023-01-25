@@ -1,16 +1,15 @@
 /* eslint-disable no-undef */
-import { dirname } from 'path';
+// import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import fs from 'fs';
 import genDiff from '../src/index.js';
 
-
 const __filename = fileURLToPath(import.meta.url);
 // константа  __filename содержит абсолютный путь к файлу, в котором она используется
-const __dirname = dirname(__filename); 
+const __dirname = path.dirname(__filename);
 //константа  __dirname cодержит абсолютный путь, к каталогу.
-const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
+const getFixturePath = (filename) => path.join(__dirname, '..','__fixtures__', filename);
 
 const resultPathStylish = getFixturePath('expected_file_stylish.txt');
 const resultPathPlain = getFixturePath('expected_file_plain.txt');
