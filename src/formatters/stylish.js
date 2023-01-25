@@ -1,3 +1,4 @@
+/* eslint-disable */
 import _ from 'lodash';
 
 const stylish = (data, depth = 1) => {
@@ -39,3 +40,4 @@ export default (data) => {
   const result = stylish(data);
   return `{\n${result}\n}`;
 };
+/* eslint-disable */

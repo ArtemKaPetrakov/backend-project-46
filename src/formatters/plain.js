@@ -1,3 +1,4 @@
+/* eslint-disable */
 import _ from 'lodash';
 
 const plain = (data, path = '') => {
@@ -13,8 +14,8 @@ const plain = (data, path = '') => {
       } else {
         return value;
       }
-    }
-    const { 
+    };
+    const {
       type, key, removedValue, currentValue 
     } = item;
 
@@ -40,3 +41,4 @@ export default (mainData) => {
   const result = plain(mainData);
   return result;
 };
+/* eslint-disable */
