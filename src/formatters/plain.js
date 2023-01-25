@@ -3,7 +3,17 @@ import _ from 'lodash';
 const plain = (data, path = '') => {
   // console.log(data);
   const result = data.flatMap((item) => {
-    const isComplexValue = (value) => _.isPlainObject(value) ? '[complex value]' : typeof value === 'string' ? `'${value}'` : value;
+    // const isComplexValue = (value) => _.isPlainObject(value) ? '[complex value]' : typeof value === 'string' ? `'${value}'` : value;
+    const isComplexValue = (value) => {
+      if (_.isPlainObject(value)) {
+        return '[complex value]';
+      }
+      if (typeof value === 'string') {
+        return `'${value}'`
+      } else {
+        return value;
+      }
+    }
     const { type, key, removedValue, currentValue } = item;
 
     const fullPath = [path, key].filter((item => item !== '')).join('.');
