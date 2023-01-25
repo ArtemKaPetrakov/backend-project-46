@@ -20,26 +20,26 @@ const resultPlain = fs.readFileSync(resultPathPlain, 'utf8');
 const resultJson = fs.readFileSync(resultPathJson, 'utf8');
 
 test('Generate Differense - stylish - .json', () => {
-  const actual = genDiff(getFixturePath(`file1.json`), getFixturePath(`file2.json`), 'stylish');
+  const actual = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), 'stylish');
   expect(actual).toEqual(resultStylish);
 });
 test('Generate Differense - stylish - .yaml', () => {
-  const actual = genDiff(getFixturePath(`file1.yaml`), getFixturePath(`file2.yaml`), 'stylish');
+  const actual = genDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'), 'stylish');
   expect(actual).toEqual(resultStylish);
 });
 test('Generate Differense - plain - .json', () => {
-  const actual = genDiff(getFixturePath(`file1.json`), getFixturePath(`file2.json`), 'plain');
+  const actual = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), 'plain');
   expect(actual).toEqual(resultPlain);
 });
 test('Generate Differense - plain - .yaml', () => {
-  const actual = genDiff(getFixturePath(`file1.yaml`), getFixturePath(`file2.yaml`), 'plain');
+  const actual = genDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'), 'plain');
   expect(actual).toEqual(resultPlain);
 });
 test('Generate Differense - JSON - .json', () => {
-  const actual = genDiff(getFixturePath(`file1.json`), getFixturePath(`file2.json`), 'json');
+  const actual = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), 'json');
   expect(actual).toEqual(resultJson);
 });
 test('Generate Differense - JSON - .yaml', () => {
-  const actual = genDiff(getFixturePath(`file1.yaml`), getFixturePath(`file2.yaml`), 'json');
+  const actual = genDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'), 'json');
   expect(actual).toEqual(resultJson);
 });
