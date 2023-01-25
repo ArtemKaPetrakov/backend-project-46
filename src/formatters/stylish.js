@@ -2,7 +2,7 @@ import _ from "lodash";
 
 const stylish = (data, depth = 1) => {
   // console.log(data);
-  const result  = data.map((item) => {
+  const result = data.map((item) => {
 
     const makeIndent = (depth) => `${'  '.repeat(depth + 1)}`;
 
