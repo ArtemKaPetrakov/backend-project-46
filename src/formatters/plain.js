@@ -19,8 +19,6 @@ const plain = (data, path = '') => {
         return `Property '${fullPath}' was updated. From ${isComplexValue(removedValue)} to ${isComplexValue(currentValue)}`;
       case 'nested':
         return plain(currentValue, fullPath);
-       default:
-        throw new Error;
     }
   }).filter(((item) => item !== '')).join('\n');
   return result;

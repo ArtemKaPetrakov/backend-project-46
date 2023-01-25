@@ -30,7 +30,6 @@ const stylish = (data, depth = 1) => {
         return `${makeIndent(depth - 1)}- ${key}: ${stringify(removedValue, depth + 1)}\n${makeIndent(depth - 1)}+ ${key}: ${stringify(currentValue, depth + 1)}`;
       case 'nested':
         return `${makeIndent(depth - 1)}  ${key}: {\n${stylish(currentValue, depth + 2)}\n${makeIndent(depth - 1)}  }`;
-        default:
     }
   });
   return result.join('\n');
