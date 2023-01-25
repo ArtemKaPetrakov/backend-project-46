@@ -16,7 +16,7 @@ const generateDiff = (object1, object2) => {
       return { type: 'equal', key, currentValue: object1[key] };
     }
     if ((Object.hasOwn(object1, key) && Object.hasOwn(object2, key)) && object1[key] !== object2[key]) {
-      return { type: 'updated', key, removedValue: object1[key], currentValue: object2[key] }
+      return { type: 'updated', key, removedValue: object1[key], currentValue: object2[key] };
     }
     if (Object.hasOwn(object1, key) && !Object.hasOwn(object2, key)) {
       return { type: 'removed', key, currentValue: object1[key] };
