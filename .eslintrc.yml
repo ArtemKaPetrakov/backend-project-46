@@ -1,13 +1,3 @@
-# env:
-#   browser: true
-#   es2021: true
-# extends: eslint:recommended
-# parserOptions:
-#   ecmaVersion: latest
-#   sourceType: module
-# rules: 
-#     no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }] # разрешает подчёркивание в именах только для двух констант
-
 ---
 
 plugins:
