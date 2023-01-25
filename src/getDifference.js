@@ -5,10 +5,10 @@ import getNewFormat from './formatters/index.js';
 const generateDiff = (object1, object2) => {
   const keys1 = Object.keys(object1);
   const keys2 = Object.keys(object2);
-  const unionKeys = _.union(keys1, keys2);
-  const sortedUnionKeys = _.sortedUniq(unionKeys);
+  const unionKeys = _.union(keys1, keys2).sort();
+  // const sortedUnionKeys = _.sortedUniq(unionKeys);
 
-  return sortedUnionKeys.map((key) => {
+  return unionKeys.map((key) => {
     if (typeof object1[key] === 'object' && typeof object2[key] === 'object') {
       return { type: 'nested', key, currentValue: generateDiff(object1[key], object2[key]) };
     }
